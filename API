@@ -1,0 +1,18 @@
+import requests
+import pprint
+
+api_key = "0364ca9834a6ca46ba09a77a39ef633f"
+
+url = f"http://api.ipstack.com/check?"
+url_path = f"access_key={api_key}"
+
+Furl = f"{url}{url_path}"
+
+headers = {}
+
+response = requests.request("GET", Furl, headers=headers)
+
+iresponse = response.json()
+
+def vr():
+    return iresponse
